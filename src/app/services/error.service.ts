@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ErrorService {
   error$ = new Subject();
 
