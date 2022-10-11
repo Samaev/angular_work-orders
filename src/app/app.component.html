@@ -1,5 +1,6 @@
 <header class="header">
   <h1>Work orders for {{ today | date: "d MMMM yyyy" }}</h1>
+  <h3>{{ date | date: "h:mm:ss" }}</h3>
   <div class="image-container">
     <img
       class="image-flag"
@@ -26,11 +27,9 @@
     <option value="20">20 orders per Page</option>
   </select>
   <div>
-    <button>PREV</button>
     <button active *ngFor="let page of pageNumbers" (click)="changePage(page)">
       {{ page }}
     </button>
-    <button>NEXT</button>
   </div>
 </div>
 <table class="table">

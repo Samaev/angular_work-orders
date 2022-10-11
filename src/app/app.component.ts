@@ -16,8 +16,10 @@ export class AppComponent implements OnInit {
   public selectedPage = 1;
   today = Date.now();
   fixedTimezone = this.today;
+  date = new Date();
 
   constructor(private ordersService: OrdersService) {}
+
 
   ngOnInit(): void {
     let pageIndex = (this.selectedPage - 1) * this.ordersPerPage;
@@ -27,6 +29,9 @@ export class AppComponent implements OnInit {
       this.visibleOrders = this.orders;
       return this.orders;
     });
+    setInterval(() => {
+      this.date = new Date();
+    }, 1000);
   }
 
   changeOrderList(event: any) {
