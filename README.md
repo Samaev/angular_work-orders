@@ -7,6 +7,7 @@ USED TECHNOLOGIES
  - HTML
  - SCSS
  - Angular 14 with Pipes
+ - TypeScript
  - Good Mood, ErorrHandling
 
 INSTRUCTIONS TO USE LOCALLY:
